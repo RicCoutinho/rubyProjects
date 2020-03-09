@@ -1,0 +1,21 @@
+module NormalizeBlankValues
+  extend ActiveSupport::Concern
+  
+  included do
+    class_attribute :metadata_normalize, default: []
+
+    before_save :normalize_blank_values
+
+    def normalize_blank_values
+      metadata_normalize.each do |column|
+        self[column].present? || self[column] = nil
+      end
+    end
+  end
+
+  class_methods do
+    def nillify_attributes(*attributes)
+      self.metadata_normalize += attributes
+    end
+  end
+end
