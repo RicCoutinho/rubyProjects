@@ -1,9 +1,9 @@
-puts "Exemple".object_id
-puts "Exemple".object_id
-puts "Exemple".object_id
-puts "Exemple".object_id
+puts "Example".object_id
+puts "Example".object_id
+puts "Example".object_id
+puts "Example".object_id
 puts "-----------------------"
-puts :Exemple.object_id
-puts :Exemple.object_id
-puts :Exemple.object_id
-puts :Exemple.object_id
+puts :Example.object_id
+puts :Example.object_id
+puts :Example.object_id
+puts :Example.object_id
